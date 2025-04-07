@@ -1,4 +1,4 @@
-<div class="bg-purple-950 min-h-screen flex flex-col items-center py-8">
+<div class="bg-gradient-to-l from-violet-200 to-violet-500 min-h-screen flex flex-col items-center py-8">
     <!-- Contenedor principal -->
     <div class="w-full max-w-4xl space-y-6">
 

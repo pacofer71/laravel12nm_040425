@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Middleware\UserAdminMiddleware;
 use App\Livewire\AdminUserPosts;
 use App\Livewire\Home;
+use App\Livewire\Tags;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', Home::class)->name('home');
@@ -15,4 +17,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
     Route::get('/userposts', AdminUserPosts::class)->name('userposts');
+    Route::get('/tags', Tags::class)->middleware(UserAdminMiddleware::class)->name('admintags');
 });

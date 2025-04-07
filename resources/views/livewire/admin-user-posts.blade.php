@@ -86,13 +86,9 @@
             {{ $posts->links() }}
         </div>
     @else
-        <div class="flex items-center p-4 mb-4 text-red-700 bg-red-100 rounded-lg" role="alert">
-            <i class="fas fa-exclamation-circle text-xl mr-3"></i>
-            <div>
-                <span class="font-medium">Sin resultados</span>
-                <p class="text-sm">No se encontró ningún post o aún no has creado ninguno.</p>
-            </div>
-        </div>
+        <x-propios.alerta>
+            No se encontró ningún post o aun no ha creado ninguno.
+        </x-propios.alerta>
     @endif
     <!-------------------------------     Update Post    ------------------------------------------------- -->
     @if (!is_null($this->uform->post))
@@ -129,7 +125,7 @@
                 <x-input-error for="uform.estado" />
 
                 <x-label class="mt-2" value="Etiquetas" />
-                <div class="flex items-center space-x-4 mt-1">
+                <div class="flex items-center space-x-4 mt-1 overflow-scroll p-6">
                     <!-- Check: Tags -->
                     @foreach ($tags as $tag)
                         <label class="flex items-center">

@@ -16,6 +16,9 @@
                         <x-nav-link href="{{ route('userposts') }}" :active="request()->routeIs('userposts')">
                             {{ __('Mis Posts') }}
                         </x-nav-link>
+                        <x-nav-link href="{{ route('admintags') }}" :active="request()->routeIs('admintags')">
+                            {{ __('Gestionar Tags') }}
+                        </x-nav-link>
                     @endauth
                 </div>
             </div>

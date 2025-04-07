@@ -36,7 +36,7 @@
             <x-input-error for="cform.estado" />
 
             <x-label class="mt-2" value="Etiquetas" />
-            <div class="flex items-center space-x-4 mt-1">
+            <div class="flex items-center space-x-4 mt-1 whitespace-normal overflow-scroll p-6">
                 <!-- Check: Tags -->
                 @foreach ($tags as $tag)
                     <label class="flex items-center">
