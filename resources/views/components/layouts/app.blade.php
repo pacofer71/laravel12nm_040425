@@ -88,6 +88,16 @@
             });
         });
     </script>
+    @session('mensaje')
+        <script>
+            Swal.fire({
+                icon: "success",
+                title: "{{ session('mensaje') }}",
+                showConfirmButton: false,
+                timer: 6500
+            });
+        </script>
+    @endsession
 </body>
 
 </html>

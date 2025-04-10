@@ -20,6 +20,9 @@
                             {{ __('Gestionar Tags') }}
                         </x-nav-link>
                     @endauth
+                    <x-nav-link href="{{ route('contacto.index') }}" :active="request()->routeIs('contacto.*')">
+                        {{ __('Contáctanos') }}
+                    </x-nav-link>
                 </div>
             </div>
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Mail\ContactoController;
 use App\Http\Middleware\UserAdminMiddleware;
 use App\Livewire\AdminUserPosts;
 use App\Livewire\Home;
@@ -7,6 +8,8 @@ use App\Livewire\Tags;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', Home::class)->name('home');
+Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto.index');
+Route::post('/contacto', [ContactoController::class, 'sendMail'])->name('contacto.send');
 
 Route::middleware([
     'auth:sanctum',
